@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>interesting acm</title>
+  
+  <subtitle>大概只是个心怀梦想的废物叭</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-02-17T13:22:00.031Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>loser</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>article</title>
+    <link href="http://yoursite.com/2020/02/14/article/"/>
+    <id>http://yoursite.com/2020/02/14/article/</id>
+    <published>2020-02-14T11:46:38.000Z</published>
+    <updated>2020-02-17T13:22:00.031Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="ACM" scheme="http://yoursite.com/categories/ACM/"/>
+    
+    
+  </entry>
+  
+</feed>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-17T13:36:12.692Z</updated>
+  <updated>2020-02-18T08:01:26.843Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,21 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>article</title>
-    <link href="http://yoursite.com/2020/02/14/article/"/>
-    <id>http://yoursite.com/2020/02/14/article/</id>
+    <title>图的存储结构</title>
+    <link href="http://yoursite.com/2020/02/14/%E5%9B%BE%E7%9A%84%E5%B8%B8%E8%A7%81%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/"/>
+    <id>http://yoursite.com/2020/02/14/%E5%9B%BE%E7%9A%84%E5%B8%B8%E8%A7%81%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/</id>
     <published>2020-02-14T11:46:38.000Z</published>
-    <updated>2020-02-17T13:36:12.692Z</updated>
+    <updated>2020-02-18T08:01:26.843Z</updated>
     
     <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;邻接矩阵&quot;&gt;&lt;a href=&quot;#邻接矩阵&quot; class=&quot;headerlink&quot; title=&quot;邻接矩阵&quot;&gt;&lt;/a&gt;邻接矩阵&lt;/h2&gt;&lt;p&gt;邻接矩阵的表示方式为一个拥有两个维度的数组。其表示方法为&lt;/p&gt;
+&lt;figure class=&quot;highlight
+        
+      
     
     </summary>
     
     
-      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="ACM" scheme="http://yoursite.com/categories/ACM/"/>
     
     
-      <category term="个人感悟" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/"/>
+      <category term="图论" scheme="http://yoursite.com/tags/%E5%9B%BE%E8%AE%BA/"/>
+    
+      <category term="基础" scheme="http://yoursite.com/tags/%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   

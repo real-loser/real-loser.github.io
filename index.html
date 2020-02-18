@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"tding.top","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"tding.top","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="用它即将到来的心情期盼明天，用它永远不会到来的心态过好当下">
@@ -213,7 +213,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-18 16:50:21" itemprop="dateModified" datetime="2020-02-18T16:50:21+08:00">2020-02-18</time>
+                <time title="修改时间：2020-02-18 17:17:44" itemprop="dateModified" datetime="2020-02-18T17:17:44+08:00">2020-02-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -227,7 +227,21 @@
                 </span>
             </span>
 
-          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
 
         </div>
       </header>
@@ -238,36 +252,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h2><p>邻接矩阵的表示方式为一个拥有两个维度的数组。其表示方法为</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">define N <span class="number">1000</span>+<span class="number">5</span></span><br><span class="line"><span class="keyword">int</span> a[N][N]</span><br><span class="line">a[i][j]=<span class="number">1</span>；<span class="comment">//其从i到j有边，其权值为1。一般当图是没有权重的</span></span><br><span class="line">		  <span class="comment">//就视为其权重为1</span></span><br></pre></td></tr></table></figure>
-<h2 id="前向星"><a href="#前向星" class="headerlink" title="前向星"></a>前向星</h2><p>前向星和邻接矩阵的不同是，它使用主要存储边的方式来存储整个图的信息。其是用一个数据结构来定义而成</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> head[maxn]<span class="comment">//存储每一个边的起始位置</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> from;</span><br><span class="line">	<span class="keyword">int</span> to;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">&#125;</span><br><span class="line">node edge[maxn];</span><br></pre></td></tr></table></figure>
-<p>前向星是按照边的起点来进行排序，当边的起点相同时就按照边的终点来排序，当边的起点和终点都相同时，就按照此边的权值来排序，其比较代码如下：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(node a,node b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(a.from==b.fron&amp;&amp;a.to==b.to) <span class="keyword">return</span> a.val&lt;b.val;</span><br><span class="line">	<span class="keyword">if</span>(a.from==b.from) <span class="keyword">return</span> a.to&lt;b.to;</span><br><span class="line">	<span class="keyword">return</span> a.from&lt;b.from;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>其读入数据的代码如下：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++) &#123;<span class="built_in">cin</span>&gt;&gt;edge[i].from&gt;&gt;edge[i].to&gt;&gt;edge[i].val;&#125;</span><br><span class="line">sort(edge,edge+m,cmp);</span><br><span class="line"><span class="built_in">memset</span>(head,<span class="number">-1</span>,<span class="keyword">sizeof</span>(head));</span><br><span class="line">head[edge[<span class="number">0</span>].from]=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;m;i++)&#123;</span><br><span class="line"><span class="keyword">if</span>(edge[i].from!=edge[i<span class="number">-1</span>].from) head[edge[i].from]=i;</span><br></pre></td></tr></table></figure>
-<p>遍历代码：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> k=head[i];edge[k].from==i&amp;&amp;k&lt;m;k++)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;edge[k].from&lt;&lt;<span class="string">' '</span>&lt;&lt;edge[i].to&lt;&lt;<span class="string">' '</span>&lt;&lt;edge[i].val;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>其时间复杂度多取决于排序算法，所以为O（mlogm）其空间复杂度为O（m+n）。前向星有很优点，但是其不可以直接判断某两点之间是否有边。</p>
-<h2 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h2><p>邻接表就是视为每一个边为一个队列，如果有和这个边相连的顶点，则直接帮这个顶点入队到这个边对应的队列里。其的数据单元也是用自定义的数据结构存储的。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edgenode</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> to;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">	edgenode * next;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">vexnode</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> from;</span><br><span class="line">	edgenode * front;</span><br><span class="line">&#125;</span><br><span class="line">vexnode vex[maxn];</span><br></pre></td></tr></table></figure>
-<p>其存储信息：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cin</span>&gt;&gt;i&gt;&gt;j&gt;&gt;w;</span><br><span class="line">edgenode * p=<span class="keyword">new</span> edgenode;</span><br><span class="line">p-&gt;to=j;</span><br><span class="line">p-&gt;val=w;</span><br><span class="line">p-&gt;next=vex[i].front;</span><br><span class="line">vex[i].front=p;</span><br></pre></td></tr></table></figure>
-<p>遍历代码：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> edgenode * k=vex[i].front;k!=<span class="literal">NULL</span>;k=k-&gt;next)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">' '</span>&lt;&lt;k-&gt;to&lt;&lt;<span class="string">' '</span>&lt;&lt;k-&gt;val&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>当然，我们可以用ＳＴＬ库里的ｖｅｃｔｏｒ模拟链表来实现<br>链表的创建：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ｖｅｃｔｏｒ＜ｖｅｃｔｏｒ＜ｐａｉｒ＜ｉｎｔ，ｉｎｔ＞＞＞ｇ；</span><br><span class="line"><span class="comment">//这里创建了一个ｖｅｃｔｏｒ套ｖｅｃｔｏｒ的数组，这个数组在使用</span></span><br><span class="line"><span class="comment">//的时候需要定义下：ｇ＝ｖｅｃｔｏｒ＜ｖｅｃｔｏｒ＜ｐａｉｒ＜ｉｎｔ，ｉｎｔ＞＞＞（ｎ）；放可是直接使用</span></span><br></pre></td></tr></table></figure>
-<p>其存储信息：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i,j,w;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;i&gt;&gt;j&gt;&gt;w;</span><br><span class="line">g[i].push_back(make_pair(j,w));</span><br><span class="line">g[j],push_back(make_pair(i,w));</span><br></pre></td></tr></table></figure>
-<p>其遍历代码：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">	<span class="keyword">for</span>(pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; to:g[x])&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;x&lt;&lt;<span class="string">' '</span>&lt;&lt;to.frist&lt;&lt;<span class="string">' '</span>&lt;&lt;to.second&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="链式前向星"><a href="#链式前向星" class="headerlink" title="链式前向星"></a>链式前向星</h2><p>链式前向星又叫静态链表，是提高其构造效率来创造出来的一种高效的数据结构。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> head[maxn];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edgenode</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> to;</span><br><span class="line">	<span class="keyword">int</span> w;</span><br><span class="line">	<span class="keyword">int</span> next;</span><br><span class="line">&#125;</span><br><span class="line">edgenode edge[maxn];</span><br></pre></td></tr></table></figure>
-<p>信息存储：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i,j,w;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;i&gt;&gt;j&gt;&gt;w;</span><br><span class="line">edge[k].to=j;<span class="comment">//这里的k代表的是这是你存储的第k条边</span></span><br><span class="line">edge[k].w=w;</span><br><span class="line">edge[k].next=head[i];</span><br><span class="line">head[i]=k;</span><br></pre></td></tr></table></figure>
-<p>遍历代码：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">	<span class="keyword">for</span>(k=head[i];k!=<span class="number">-1</span>;k=edge[k].next)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">' '</span>&lt;&lt;edge[k].to&lt;&lt;<span class="string">' '</span>&lt;&lt;edge[k].w&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <h2 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/archives/d96fe4f4.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -398,6 +391,18 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">loser</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">2k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">2 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
   </div>
@@ -406,6 +411,26 @@
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 

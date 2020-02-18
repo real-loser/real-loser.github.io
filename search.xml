@@ -3,7 +3,8 @@
   <entry>
     <title>图的存储结构</title>
     <url>/archives/d96fe4f4.html</url>
-    <content><![CDATA[<h2 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h2><p>邻接矩阵的表示方式为一个拥有两个维度的数组。其表示方法为</p>
+    <content><![CDATA[<h2 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h2><a id="more"></a>
+<p>邻接矩阵的表示方式为一个拥有两个维度的数组。其表示方法为</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">define N <span class="number">1000</span>+<span class="number">5</span></span><br><span class="line"><span class="keyword">int</span> a[N][N]</span><br><span class="line">a[i][j]=<span class="number">1</span>；<span class="comment">//其从i到j有边，其权值为1。一般当图是没有权重的</span></span><br><span class="line">		  <span class="comment">//就视为其权重为1</span></span><br></pre></td></tr></table></figure>
 <h2 id="前向星"><a href="#前向星" class="headerlink" title="前向星"></a>前向星</h2><p>前向星和邻接矩阵的不同是，它使用主要存储边的方式来存储整个图的信息。其是用一个数据结构来定义而成</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> head[maxn]<span class="comment">//存储每一个边的起始位置</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> from;</span><br><span class="line">	<span class="keyword">int</span> to;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">&#125;</span><br><span class="line">node edge[maxn];</span><br></pre></td></tr></table></figure>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>interesting acm</title>
-  
+  <icon>http://tding.top/icon.png</icon>
   <subtitle>大概只是个心怀梦想的废物叭</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2020-02-18T08:01:26.843Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://tding.top/"/>
+  <updated>2020-02-18T08:50:21.216Z</updated>
+  <id>http://tding.top/</id>
   
   <author>
     <name>loser</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>图的存储结构</title>
-    <link href="http://yoursite.com/2020/02/14/%E5%9B%BE%E7%9A%84%E5%B8%B8%E8%A7%81%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/"/>
-    <id>http://yoursite.com/2020/02/14/%E5%9B%BE%E7%9A%84%E5%B8%B8%E8%A7%81%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/</id>
+    <link href="http://tding.top/archives/d96fe4f4.html"/>
+    <id>http://tding.top/archives/d96fe4f4.html</id>
     <published>2020-02-14T11:46:38.000Z</published>
-    <updated>2020-02-18T08:01:26.843Z</updated>
+    <updated>2020-02-18T08:50:21.216Z</updated>
     
     <summary type="html">
     
@@ -37,12 +37,12 @@
     </summary>
     
     
-      <category term="ACM" scheme="http://yoursite.com/categories/ACM/"/>
+      <category term="ACM" scheme="http://tding.top/categories/ACM/"/>
     
     
-      <category term="图论" scheme="http://yoursite.com/tags/%E5%9B%BE%E8%AE%BA/"/>
+      <category term="图论" scheme="http://tding.top/tags/%E5%9B%BE%E8%AE%BA/"/>
     
-      <category term="基础" scheme="http://yoursite.com/tags/%E5%9F%BA%E7%A1%80/"/>
+      <category term="基础" scheme="http://tding.top/tags/%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
